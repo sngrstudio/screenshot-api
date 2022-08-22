@@ -3,3 +3,12 @@ autoLaunch = false
 
 [build]
 functions = "functions"
+
+[functions]
+external_node_modules = ["@sparticuz/chrome-aws-lambda"]
+
+[[redirects]]
+from = "/image/*"
+to="/.netlify/functions/screenshot/:splat"
+status=200
+force=true

@@ -22,9 +22,10 @@ const getImage:Handler = async () => {
         await page.goto('https://sngr.studio', { waitUntil: ['networkidle0'] })
         image = await page.screenshot() as Buffer
     } catch(e) {
+        console.error(e.message)
         return {
             statusCode: 500,
-            body: JSON.stringify(e)
+            body: JSON.stringify({ Error: e.message })
         }
     } finally {
         if (browser !== null) {

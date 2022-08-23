@@ -1,9 +1,14 @@
 ---
 import '~/styles/global.scss'
 ---
+
 <html>
-    <head></head>
-    <body>
-        <slot/>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>

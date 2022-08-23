@@ -1,0 +1,20 @@
+---
+import ImgLoader from './imgLoader'
+import Form from './form'
+---
+
+<section>
+  <h1>SNGR Studio's Screenshot API</h1>
+  <ImgLoader client:idle />
+  <Form client:idle />
+</section>
+
+<style lang="scss">
+  section {
+    @apply min-h-screen flex flex-col items-center justify-center gap-4;
+  }
+
+  h1 {
+    @apply font-black text-4xl text-center;
+  }
+</style>

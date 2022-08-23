@@ -1,7 +1,14 @@
 ---
-import BaseLayout from "~/layouts/base.astro";
-import Image from "~/components/image.astro";
+import BaseLayout from '~/layouts/base.astro'
+import Main from '~/components/main.astro'
 ---
+
 <BaseLayout>
-    <Image />
+  <main><Main /></main>
 </BaseLayout>
+
+<style lang="scss">
+  main {
+    @apply px-4;
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import BaseLayout from '~/layouts/base.astro'
+import Main from '~/components/main.astro'
+
+const title = "SNGR Studio's Screenshot API"
+---
+
+<BaseLayout>
+  <title slot="head">{title}</title>
+  <main>
+    <Main title={title} />
+  </main>
+</BaseLayout>
+
+<style lang="scss">
+  main {
+    @apply px-4;
+  }
+</style>

@@ -1,7 +1,7 @@
 import type { Handler } from '@netlify/functions'
 import type { Browser } from 'puppeteer-core'
 import { builder } from '@netlify/functions'
-import chrome from '@sparticuz/chrome-aws-lambda'
+import chrome from 'chrome-aws-lambda'
 
 const getBrowser = async () => chrome.puppeteer.launch({
     args: chrome.args,
@@ -22,7 +22,6 @@ const getImage:Handler = async () => {
         await page.goto('https://sngr.studio', { waitUntil: ['networkidle0'] })
         image = await page.screenshot() as Buffer
     } catch(e) {
-        console.error(e)
         return {
             statusCode: 500,
             body: JSON.stringify(e)

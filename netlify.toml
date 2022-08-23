@@ -2,11 +2,10 @@
 autoLaunch = false
 
 [build]
-command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer"
 functions = "functions"
 
 [functions]
-external_node_modules = ["@sparticuz/chrome-aws-lambda"]
+external_node_modules = ["chrome-aws-lambda"]
 
 [[redirects]]
 from = "/image/*"

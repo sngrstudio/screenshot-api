@@ -5,7 +5,7 @@ autoLaunch = false
 functions = "functions"
 
 [functions]
-external_node_modules = ["@sparticuz/chrome-aws-lambda"]
+external_node_modules = ["chrome-aws-lambda"]
 
 [[redirects]]
 from = "/image/*"

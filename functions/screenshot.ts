@@ -22,8 +22,8 @@ const getBrowser = async () => chrome.puppeteer.launch({
 
 const getImage:Handler = async (event) => {
     const params = event.path.split('/')
-    if (!isURL(decodeURIComponent(params.at(-1)))) throw new Error(`Please provide decoded URL, e.g: '/image/https%3A%2F%2Fwww.sngr.studio'`)
-    const url = new URL(decodeURIComponent(params.at(-1)))
+    if (!isURL(decodeURIComponent(params[params.length - 1]))) throw new Error(`Please provide decoded URL, e.g: '/image/https%3A%2F%2Fwww.sngr.studio'`)
+    const url = new URL(decodeURIComponent(params[params.length - 1]))
     const options = {
         width: Number(params.find(p => p.endsWith('w'))?.replace('w', '')) || 1280,
         height: Number(params.find(p => p.endsWith('h'))?.replace('h', '')) || 720

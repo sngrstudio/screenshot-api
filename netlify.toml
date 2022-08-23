@@ -1,7 +1,11 @@
 [dev]
+framework = "astro"
+command = "yarn dev"
 autoLaunch = false
 
 [build]
+command="yarn build"
+publish = "dist"
 functions = "functions"
 
 [functions]

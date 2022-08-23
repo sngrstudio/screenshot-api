@@ -4,7 +4,7 @@ command = "yarn dev"
 autoLaunch = false
 
 [build]
-command="yarn build"
+command = "yarn build"
 publish = "dist"
 functions = "functions"
 
@@ -13,6 +13,14 @@ external_node_modules = ["chrome-aws-lambda"]
 
 [[redirects]]
 from = "/image/*"
-to="/.netlify/functions/screenshot/:splat"
-status=200
-force=true
+to = "/.netlify/functions/screenshot/:splat"
+status = 200
+force = true
+
+[[plugins]]
+package = "netlify-plugin-minify-html"
+
+[plugins.inputs.minifierOptions]
+collapseWhitespace = true
+minifyJS = true
+processScripts = ["module"]

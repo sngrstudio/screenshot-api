@@ -11,12 +11,6 @@ functions = "functions"
 [functions]
 external_node_modules = ["chrome-aws-lambda"]
 
-[[redirects]]
-from = "/image/*"
-to = "/.netlify/functions/screenshot/:splat"
-status = 200
-force = true
-
 [[plugins]]
 package = "netlify-plugin-minify-html"
 
@@ -24,3 +18,10 @@ package = "netlify-plugin-minify-html"
 collapseWhitespace = true
 minifyJS = true
 processScripts = ["module"]
+
+[[redirects]]
+from = "/image/*"
+to = "/.netlify/functions/screenshot/:splat"
+status = 200
+force = true
+headers = { Access-Control-Allow-Origin = "*" }

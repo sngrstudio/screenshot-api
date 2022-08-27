@@ -1,26 +1,33 @@
 [dev]
-framework = "astro"
-command = "yarn dev"
-autoLaunch = false
+  framework = "astro"
+  command = "yarn dev"
+  autoLaunch = false
 
 [build]
-command = "yarn build"
-publish = "dist"
-functions = "functions"
+  command = "yarn build"
+  publish = "dist"
+  functions = "functions"
 
 [functions]
-external_node_modules = ["chrome-aws-lambda"]
+  external_node_modules = ["chrome-aws-lambda"] 
 
 [[plugins]]
-package = "netlify-plugin-minify-html"
+  package = "netlify-plugin-minify-html"
 
 [plugins.inputs.minifierOptions]
-collapseWhitespace = true
-minifyJS = true
-processScripts = ["module"]
+  collapseWhitespace = true
+  minifyJS = true
+  processScripts = ["module"]
 
 [[redirects]]
-from = "/image/*"
-to = "/.netlify/functions/screenshot/:splat"
-status = 200
-force = true
+  from = "/image"
+  to = "/image/:w/:h/:url"
+  query = { w = ":w", h = ":h", url = ":url" }
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/image/*"
+  to = "/.netlify/functions/screenshot/:splat"
+  status = 200
+  force = true

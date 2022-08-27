@@ -22,7 +22,6 @@
     "postcss-font-magician": "^3.0.0",
     "prettier": "2.7.1",
     "prettier-plugin-astro": "^0.5.2",
-    "prettier-plugin-toml": "0.3.1",
     "puppeteer": "^10.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

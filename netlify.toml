@@ -20,7 +20,7 @@
   processScripts = ["module"]
 
 [[redirects]]
-  from = "/image/q"
+  from = "/img"
   to = "/image/:w/:h/:url"
   query = { w = ":w", h = ":h", url = ":url" }
   status = 301

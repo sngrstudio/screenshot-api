@@ -21,6 +21,13 @@
 
 [[redirects]]
   from = "/img"
+  to = "/image/:url"
+  query = { url = ":url" }
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/img"
   to = "/image/:w/:h/:url"
   query = { w = ":w", h = ":h", url = ":url" }
   status = 301

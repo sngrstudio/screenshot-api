@@ -13,7 +13,7 @@
     "check": "prettier --check ."
   },
   "devDependencies": {
-    "@astrojs/react": "^1.0.0",
+    "@astrojs/react": "^1.1.2",
     "@types/react": "^18.0.17",
     "astro": "^1.0.7",
     "autoprefixer": "^10.4.8",

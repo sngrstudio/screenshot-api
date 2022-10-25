@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@astrojs/react': ^1.1.2
-  '@nanostores/react': ^0.3.0
+  '@nanostores/react': ^0.4.0
   '@netlify/functions': ^1.2.0
   '@types/react': 18.0.23
   astro: ^1.2.2
@@ -24,7 +24,7 @@ specifiers:
 
 dependencies:
   '@astrojs/react': 1.1.2_biqbaboplfbrettd7655fr4n2y
-  '@nanostores/react': 0.3.0_resngft2y545aodfc4fe35fzvu
+  '@nanostores/react': 0.4.0_resngft2y545aodfc4fe35fzvu
   '@netlify/functions': 1.2.0
   astro: 1.2.2_sass@1.54.5
   autoprefixer: 10.4.8_postcss@8.4.16
@@ -463,11 +463,11 @@ packages:
     resolution: {integrity: sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==}
     dev: false
 
-  /@nanostores/react/0.3.0_resngft2y545aodfc4fe35fzvu:
-    resolution: {integrity: sha512-gf2vRS2kGxLzLAF20BlUeFxMtBVEHaErk2XQ1YYnTAPtuesBD2nB1ndAOOinL2mSS2zxyQ4jtW3uljvbsGNuIQ==}
+  /@nanostores/react/0.4.0_resngft2y545aodfc4fe35fzvu:
+    resolution: {integrity: sha512-u7Y3s1B4hwsBxpIxClx0F/Q7TF1AsCU/F7Tt3n+tWeCebQ0cs2spthmskJY689XIMTRJXfBZF83kJDaDZeavVA==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     peerDependencies:
-      nanostores: ^0.6.0
+      nanostores: ^0.7.0
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
     dependencies:

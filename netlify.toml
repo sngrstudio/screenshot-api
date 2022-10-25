@@ -1,10 +1,10 @@
 [dev]
   framework = "astro"
-  command = "yarn dev"
+  command = "pnpm run dev"
   autoLaunch = false
 
 [build]
-  command = "yarn build"
+  command = "pnpm run build"
   publish = "dist"
   functions = "functions"
 

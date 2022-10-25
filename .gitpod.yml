@@ -6,5 +6,5 @@ image:
   file: .gitpod.dockerfile
 
 tasks:
-  - init: yarn
+  - init: pnpm i
     command: ntl dev

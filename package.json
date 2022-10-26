@@ -23,7 +23,7 @@
     "daisyui": "^2.27.0",
     "nanostores": "^0.6.0",
     "postcss-font-magician": "^3.0.0",
-    "puppeteer-core": "^10.1.0",
+    "puppeteer-core": "^19.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-hook-form": "^7.35.0",

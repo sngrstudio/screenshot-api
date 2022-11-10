@@ -30,9 +30,9 @@ const getImage: Handler = async (event) => {
   const url = new URL(decodeURIComponent(params[params.length - 1]))
   const options = {
     width:
-      Number(params.find((p) => p.endsWith('w'))?.replace('w', '')) || 1280,
+      Number(params.find((p) => p.endsWith('w'))?.replace('w', '')) || 1200,
     height:
-      Number(params.find((p) => p.endsWith('h'))?.replace('h', '')) || 720,
+      Number(params.find((p) => p.endsWith('h'))?.replace('h', '')) || 630,
   }
 
   let browser: Browser | null = null
@@ -45,8 +45,26 @@ const getImage: Handler = async (event) => {
       width: options.width,
       height: options.height,
     })
-    await page.goto(url.href, { waitUntil: ['networkidle2'] })
-    image = (await page.screenshot({ type: 'jpeg', quality: 80 })) as Buffer
+
+    const response = await Promise.race([
+      await page.goto(url.href, {
+        waitUntil: 'load',
+        timeout: 8500,
+      }),
+      new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(false)
+        }, 7000)
+      }),
+    ])
+
+    if (response === false) await page.evaluate(() => window.stop())
+
+    image = (await page.screenshot({
+      type: 'jpeg',
+      quality: 80,
+      captureBeyondViewport: false,
+    })) as Buffer
   } catch (e) {
     console.error(e.message)
     return {

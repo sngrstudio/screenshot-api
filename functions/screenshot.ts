@@ -3,7 +3,6 @@ import type { Browser } from 'puppeteer-core'
 import { builder } from '@netlify/functions'
 import chrome from 'chrome-aws-lambda'
 import { resolve } from 'path'
-import { rejects } from 'assert'
 
 const isURL = (url: string) => {
   try {
@@ -47,26 +46,46 @@ const getImage: Handler = async (event) => {
       width: options.width,
       height: options.height,
     })
-    await page.goto(url.href, { waitUntil: 'domcontentloaded' })
-    await page.evaluate(async () => {
-      const selectors = Array.from(document.querySelectorAll('img'))
-      await Promise.all([
-        document.fonts.ready,
-        ...selectors.map((img) => {
-          if (img.complete) {
-            if (img.naturalHeight !== 0) return
 
-            throw new Error('Gagal memuat gambar!')
-          }
+    const response = await Promise.race([
+      async () => {
+        await page.goto(url.href, {
+          waitUntil: 'domcontentloaded',
+          timeout: 8500,
+        })
+        await page.evaluate(async () => {
+          const selectors = Array.from(document.querySelectorAll('img'))
+          await Promise.all([
+            document.fonts.ready,
+            ...selectors.map((img) => {
+              if (img.complete) {
+                if (img.naturalHeight !== 0) return
 
-          return new Promise((resolve, reject) => {
-            img.addEventListener('load', resolve)
-            img.addEventListener('error', reject)
-          })
-        }),
-      ])
-    })
-    image = (await page.screenshot({ type: 'jpeg', quality: 80 })) as Buffer
+                throw new Error('Gagal memuat gambar!')
+              }
+
+              return new Promise((resolve, reject) => {
+                img.addEventListener('load', resolve)
+                img.addEventListener('error', reject)
+              })
+            }),
+          ])
+        })
+      },
+      new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(false)
+        }, 7000)
+      }),
+    ])
+
+    if (response === false) await page.evaluate(() => window.stop())
+
+    image = (await page.screenshot({
+      type: 'jpeg',
+      quality: 80,
+      captureBeyondViewport: false,
+    })) as Buffer
   } catch (e) {
     return {
       statusCode: 500,

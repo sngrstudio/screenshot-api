@@ -31,9 +31,9 @@ const getImage: Handler = async (event) => {
   const url = new URL(decodeURIComponent(params[params.length - 1]))
   const options = {
     width:
-      Number(params.find((p) => p.endsWith('w'))?.replace('w', '')) || 1280,
+      Number(params.find((p) => p.endsWith('w'))?.replace('w', '')) || 1200,
     height:
-      Number(params.find((p) => p.endsWith('h'))?.replace('h', '')) || 720,
+      Number(params.find((p) => p.endsWith('h'))?.replace('h', '')) || 630,
   }
 
   let browser: Browser | null = null
@@ -48,30 +48,10 @@ const getImage: Handler = async (event) => {
     })
 
     const response = await Promise.race([
-      async () => {
-        await page.goto(url.href, {
-          waitUntil: 'domcontentloaded',
-          timeout: 8500,
-        })
-        await page.evaluate(async () => {
-          const selectors = Array.from(document.querySelectorAll('img'))
-          await Promise.all([
-            document.fonts.ready,
-            ...selectors.map((img) => {
-              if (img.complete) {
-                if (img.naturalHeight !== 0) return
-
-                throw new Error('Gagal memuat gambar!')
-              }
-
-              return new Promise((resolve, reject) => {
-                img.addEventListener('load', resolve)
-                img.addEventListener('error', reject)
-              })
-            }),
-          ])
-        })
-      },
+      await page.goto(url.href, {
+        waitUntil: 'load',
+        timeout: 8500,
+      }),
       new Promise((resolve) => {
         setTimeout(() => {
           resolve(false)

@@ -3,47 +3,47 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/react': 1.2.2
   '@nanostores/react': 0.4.1
-  '@netlify/functions': 1.3.0
+  '@netlify/functions': 1.4.0
   '@types/react': 18.0.26
-  astro: 1.8.0
+  astro: 1.9.1
   autoprefixer: 10.4.13
   chrome-aws-lambda: 10.1.0
-  daisyui: 2.46.0
+  daisyui: 2.46.1
   nanostores: 0.7.1
   npm-run-all: 4.1.5
   postcss-font-magician: 3.0.0
-  prettier: 2.8.1
-  prettier-plugin-astro: 0.7.0
+  prettier: 2.8.2
+  prettier-plugin-astro: 0.7.2
   puppeteer: 10.4.0
   puppeteer-core: 10.4.0
   react: 18.2.0
   react-dom: 18.2.0
-  react-hook-form: 7.41.3
+  react-hook-form: 7.41.5
   sass: 1.57.1
   tailwindcss: 3.2.4
 
 dependencies:
   '@astrojs/react': 1.2.2_ie75ejlwqy5zh3tldgt7pftwcu
   '@nanostores/react': 0.4.1_zzfsm6rnukgopcmw3p5zs3flzu
-  '@netlify/functions': 1.3.0
-  astro: 1.8.0_sass@1.57.1
+  '@netlify/functions': 1.4.0
+  astro: 1.9.1_sass@1.57.1
   autoprefixer: 10.4.13_postcss@8.4.20
   chrome-aws-lambda: 10.1.0_puppeteer-core@10.4.0
-  daisyui: 2.46.0_r4gnkvssmvyxmi2wmat5xbx36a
+  daisyui: 2.46.1_r4gnkvssmvyxmi2wmat5xbx36a
   nanostores: 0.7.1
   postcss-font-magician: 3.0.0_postcss@8.4.20
   puppeteer-core: 10.4.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-hook-form: 7.41.3_react@18.2.0
+  react-hook-form: 7.41.5_react@18.2.0
   sass: 1.57.1
   tailwindcss: 3.2.4_postcss@8.4.20
 
 devDependencies:
   '@types/react': 18.0.26
   npm-run-all: 4.1.5
-  prettier: 2.8.1
-  prettier-plugin-astro: 0.7.0
+  prettier: 2.8.2
+  prettier-plugin-astro: 0.7.2
   puppeteer: 10.4.0
 
 packages:
@@ -56,12 +56,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.17
     dev: false
 
-  /@astrojs/compiler/0.29.19:
-    resolution: {integrity: sha512-lvPpoOA6Fc1NpJrPT65ZOhhFieYkiBds9wzOhWX55lXMUpNPu5CUxqzgDAkNSTIoXHZxkxHfi+6EpFNnRZBBYQ==}
-
   /@astrojs/compiler/0.31.3:
     resolution: {integrity: sha512-WbA05QH5xkdaJ3XtzDuYOjtqsip2InW5rk156sSdaHs5qN2NroUHbzWZthHJwmNAAjQSGXVIj+O6jQj81zzX/Q==}
-    dev: false
 
   /@astrojs/language-server/0.28.3:
     resolution: {integrity: sha512-fPovAX/X46eE2w03jNRMpQ7W9m2mAvNt4Ay65lD9wl1Z5vIQYxlg7Enp9qP225muTr4jSVB5QiLumFJmZMAaVA==}
@@ -69,8 +65,8 @@ packages:
     dependencies:
       '@vscode/emmet-helper': 2.8.6
       events: 3.3.0
-      prettier: 2.8.1
-      prettier-plugin-astro: 0.7.0
+      prettier: 2.8.2
+      prettier-plugin-astro: 0.7.2
       source-map: 0.7.4
       vscode-css-languageservice: 6.2.1
       vscode-html-languageservice: 5.0.3
@@ -493,8 +489,8 @@ packages:
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
-  /@netlify/functions/1.3.0:
-    resolution: {integrity: sha512-hN/Fgpz8XIOBfsBPLYUMxVKBlCopgeqGB0popayicnmkFLnvKByTTMYgF01wcF9DBtBQdV0H2h1kPFpMl34I8w==}
+  /@netlify/functions/1.4.0:
+    resolution: {integrity: sha512-gy7ULTIRroc2/jyFVGx1djCmmBMVisIwrvkqggq5B6iDcInRSy2Tpkm+V5C63hKJVkNRskKWtLQKm9ecCaQTjA==}
     engines: {node: '>=8.3.0'}
     dependencies:
       is-promise: 4.0.0
@@ -808,8 +804,8 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /astro/1.8.0_sass@1.57.1:
-    resolution: {integrity: sha512-MZIJveOC1OCIA0w2XmxjDtKviAEuYdF142DVq0VApInE1lm+CvAoyMgJs0a1h4mydD2vgQZpTjPhYKJIdxDjOA==}
+  /astro/1.9.1_sass@1.57.1:
+    resolution: {integrity: sha512-aQ6rvAP4w4VCgipVYA/zPmnkuTbFrMZ/+x/sAv2W1uJHWU2iQmrVRrrjUFJl+i1TuYYlHAuC2vKK7aRyXCjD4A==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -842,7 +838,7 @@ packages:
       estree-walker: 3.0.1
       execa: 6.1.0
       fast-glob: 3.2.12
-      github-slugger: 1.5.0
+      github-slugger: 2.0.0
       gray-matter: 4.0.3
       html-entities: 2.3.3
       html-escaper: 3.0.3
@@ -1213,8 +1209,8 @@ packages:
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /daisyui/2.46.0_r4gnkvssmvyxmi2wmat5xbx36a:
-    resolution: {integrity: sha512-7L+KMCADsAmZkJUIabgDSpqEF9+uVPvyJSkSieOpY2WKeDd2pvcELZMs/AKaKkB5gcrb9cPP9vFdLXeDFJj90g==}
+  /daisyui/2.46.1_r4gnkvssmvyxmi2wmat5xbx36a:
+    resolution: {integrity: sha512-i59+nLuzzPAVOhNhot3KLtt6stfYeCIPXs9uiLcpXjykpqxHfBA3W6hQWOUWPMwfqhyQd0WKub3sydtPGjzLtA==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
@@ -1867,6 +1863,10 @@ packages:
 
   /github-slugger/1.5.0:
     resolution: {integrity: sha512-wIh+gKBI9Nshz2o46B0B3f5k/W+WI9ZAv6y5Dn5WJ5SK1t0TnDimB4WE5rmTD05ZAIn8HALCZVmCsvj0w0v0lw==}
+    dev: false
+
+  /github-slugger/2.0.0:
+    resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
     dev: false
 
   /glob-parent/5.1.2:
@@ -3421,17 +3421,17 @@ packages:
       which-pm: 2.0.0
     dev: false
 
-  /prettier-plugin-astro/0.7.0:
-    resolution: {integrity: sha512-ehCUx7MqHWvkHwUmxxAWLsL35pFaCTM5YXQ8xjG/1W6dY2yBhvEks+2aCfjeI5zmMrZNCXkiMQtpznSlLSLrxw==}
-    engines: {node: ^14.15.0 || >=16.0.0, npm: '>=6.14.0'}
+  /prettier-plugin-astro/0.7.2:
+    resolution: {integrity: sha512-mmifnkG160BtC727gqoimoxnZT/dwr8ASxpoGGl6EHevhfblSOeu+pwH1LAm5Qu1MynizktztFujHHaijLCkww==}
+    engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
-      '@astrojs/compiler': 0.29.19
-      prettier: 2.8.1
+      '@astrojs/compiler': 0.31.3
+      prettier: 2.8.2
       sass-formatter: 0.7.5
       synckit: 0.8.4
 
-  /prettier/2.8.1:
-    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+  /prettier/2.8.2:
+    resolution: {integrity: sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
 
@@ -3530,8 +3530,8 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-hook-form/7.41.3_react@18.2.0:
-    resolution: {integrity: sha512-5QNTmqJtDb88WV5n41b6+AmcDMVyaJ3tccPgHAgS215w3jZ3bmJhDO27kNTr8u4YHNYXmS7p1/4/KachBAlUtw==}
+  /react-hook-form/7.41.5_react@18.2.0:
+    resolution: {integrity: sha512-DAKjSJ7X9f16oQrP3TW2/eD9N6HOgrmIahP4LOdFphEWVfGZ2LulFd6f6AQ/YS/0cx/5oc4j8a1PXxuaurWp/Q==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18

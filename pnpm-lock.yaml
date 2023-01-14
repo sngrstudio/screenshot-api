@@ -12,7 +12,7 @@ specifiers:
   nanostores: 0.7.1
   npm-run-all: 4.1.5
   postcss-font-magician: 3.0.0
-  prettier: 2.8.2
+  prettier: 2.8.3
   prettier-plugin-astro: 0.7.2
   puppeteer: 10.4.0
   puppeteer-core: 10.4.0
@@ -42,7 +42,7 @@ dependencies:
 devDependencies:
   '@types/react': 18.0.26
   npm-run-all: 4.1.5
-  prettier: 2.8.2
+  prettier: 2.8.3
   prettier-plugin-astro: 0.7.2
   puppeteer: 10.4.0
 
@@ -65,7 +65,7 @@ packages:
     dependencies:
       '@vscode/emmet-helper': 2.8.6
       events: 3.3.0
-      prettier: 2.8.2
+      prettier: 2.8.3
       prettier-plugin-astro: 0.7.2
       source-map: 0.7.4
       vscode-css-languageservice: 6.2.1
@@ -3426,12 +3426,12 @@ packages:
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
       '@astrojs/compiler': 0.31.3
-      prettier: 2.8.2
+      prettier: 2.8.3
       sass-formatter: 0.7.5
       synckit: 0.8.4
 
-  /prettier/2.8.2:
-    resolution: {integrity: sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==}
+  /prettier/2.8.3:
+    resolution: {integrity: sha512-tJ/oJ4amDihPoufT5sM0Z1SKEuKay8LfVAMlbbhnnkvt6BUserZylqo2PN+p9KeljLr0OHa2rXHU1T8reeoTrw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
 

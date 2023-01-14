@@ -5,7 +5,7 @@ specifiers:
   '@nanostores/react': 0.4.1
   '@netlify/functions': 1.4.0
   '@types/react': 18.0.26
-  astro: 1.9.1
+  astro: 1.9.2
   autoprefixer: 10.4.13
   chrome-aws-lambda: 10.1.0
   daisyui: 2.46.1
@@ -18,7 +18,7 @@ specifiers:
   puppeteer-core: 10.4.0
   react: 18.2.0
   react-dom: 18.2.0
-  react-hook-form: 7.41.5
+  react-hook-form: 7.42.0
   sass: 1.57.1
   tailwindcss: 3.2.4
 
@@ -26,7 +26,7 @@ dependencies:
   '@astrojs/react': 1.2.2_ie75ejlwqy5zh3tldgt7pftwcu
   '@nanostores/react': 0.4.1_zzfsm6rnukgopcmw3p5zs3flzu
   '@netlify/functions': 1.4.0
-  astro: 1.9.1_sass@1.57.1
+  astro: 1.9.2_sass@1.57.1
   autoprefixer: 10.4.13_postcss@8.4.20
   chrome-aws-lambda: 10.1.0_puppeteer-core@10.4.0
   daisyui: 2.46.1_r4gnkvssmvyxmi2wmat5xbx36a
@@ -35,7 +35,7 @@ dependencies:
   puppeteer-core: 10.4.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-hook-form: 7.41.5_react@18.2.0
+  react-hook-form: 7.42.0_react@18.2.0
   sass: 1.57.1
   tailwindcss: 3.2.4_postcss@8.4.20
 
@@ -804,8 +804,8 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /astro/1.9.1_sass@1.57.1:
-    resolution: {integrity: sha512-aQ6rvAP4w4VCgipVYA/zPmnkuTbFrMZ/+x/sAv2W1uJHWU2iQmrVRrrjUFJl+i1TuYYlHAuC2vKK7aRyXCjD4A==}
+  /astro/1.9.2_sass@1.57.1:
+    resolution: {integrity: sha512-L+Ma0eR0Aa6QZg7RF0lEs+106Ye1/zukvtq3KtsYIogAojltlwllwU9X5CwMBzFwA55NxpNp4gSRh5US/xb+8Q==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -3530,8 +3530,8 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-hook-form/7.41.5_react@18.2.0:
-    resolution: {integrity: sha512-DAKjSJ7X9f16oQrP3TW2/eD9N6HOgrmIahP4LOdFphEWVfGZ2LulFd6f6AQ/YS/0cx/5oc4j8a1PXxuaurWp/Q==}
+  /react-hook-form/7.42.0_react@18.2.0:
+    resolution: {integrity: sha512-XDEjSUZmT68FOSv2FaD3XlN1sa2HB9vIQ9SVKsogGrHUY43o2aANQDC9LgHa4zusqCMKLG3qitpTcEhpYWHBFw==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18

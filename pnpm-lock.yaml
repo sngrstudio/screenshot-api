@@ -8,12 +8,12 @@ specifiers:
   astro: 1.9.2
   autoprefixer: 10.4.13
   chrome-aws-lambda: 10.1.0
-  daisyui: 2.47.0
+  daisyui: 2.49.0
   nanostores: 0.7.1
   npm-run-all: 4.1.5
   postcss-font-magician: 3.0.0
   prettier: 2.8.3
-  prettier-plugin-astro: 0.7.2
+  prettier-plugin-astro: 0.8.0
   puppeteer: 10.4.0
   puppeteer-core: 10.4.0
   react: 18.2.0
@@ -29,7 +29,7 @@ dependencies:
   astro: 1.9.2_sass@1.57.1
   autoprefixer: 10.4.13_postcss@8.4.20
   chrome-aws-lambda: 10.1.0_puppeteer-core@10.4.0
-  daisyui: 2.47.0_r4gnkvssmvyxmi2wmat5xbx36a
+  daisyui: 2.49.0_r4gnkvssmvyxmi2wmat5xbx36a
   nanostores: 0.7.1
   postcss-font-magician: 3.0.0_postcss@8.4.20
   puppeteer-core: 10.4.0
@@ -43,7 +43,7 @@ devDependencies:
   '@types/react': 18.0.27
   npm-run-all: 4.1.5
   prettier: 2.8.3
-  prettier-plugin-astro: 0.7.2
+  prettier-plugin-astro: 0.8.0
   puppeteer: 10.4.0
 
 packages:
@@ -58,6 +58,11 @@ packages:
 
   /@astrojs/compiler/0.31.3:
     resolution: {integrity: sha512-WbA05QH5xkdaJ3XtzDuYOjtqsip2InW5rk156sSdaHs5qN2NroUHbzWZthHJwmNAAjQSGXVIj+O6jQj81zzX/Q==}
+    dev: false
+
+  /@astrojs/compiler/1.0.1:
+    resolution: {integrity: sha512-77aacobLKcL98NmhK3OBS5EHIrX9gs1ckB/vGSIdkVZuB7u51V4jh05I6W0tSvG7/86tALv6QtHTRZ8rLhFTbQ==}
+    dev: true
 
   /@astrojs/language-server/0.28.3:
     resolution: {integrity: sha512-fPovAX/X46eE2w03jNRMpQ7W9m2mAvNt4Ay65lD9wl1Z5vIQYxlg7Enp9qP225muTr4jSVB5QiLumFJmZMAaVA==}
@@ -1209,8 +1214,8 @@ packages:
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /daisyui/2.47.0_r4gnkvssmvyxmi2wmat5xbx36a:
-    resolution: {integrity: sha512-svZpXKldtHjXTEdj/lu2n7b+EQJSatqvmVB59k4dhCDOYUhUZ3jtGuPrgOJlPysHhDjxjCRWWug/fgV5e8tc/w==}
+  /daisyui/2.49.0_r4gnkvssmvyxmi2wmat5xbx36a:
+    resolution: {integrity: sha512-+hEFMupi/7rqkAH4d3iBWj1TXRq73V3PrkJ3HiDqFuQgMoE1/UQOgMoeqaHa3r4IRo4fjMNauwHBA17qT0YSIA==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
@@ -3429,6 +3434,17 @@ packages:
       prettier: 2.8.3
       sass-formatter: 0.7.5
       synckit: 0.8.4
+    dev: false
+
+  /prettier-plugin-astro/0.8.0:
+    resolution: {integrity: sha512-kt9wk33J7HvFGwFaHb8piwy4zbUmabC8Nu+qCw493jhe96YkpjscqGBPy4nJ9TPy9pd7+kEx1zM81rp+MIdrXg==}
+    engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
+    dependencies:
+      '@astrojs/compiler': 1.0.1
+      prettier: 2.8.3
+      sass-formatter: 0.7.5
+      synckit: 0.8.4
+    dev: true
 
   /prettier/2.8.3:
     resolution: {integrity: sha512-tJ/oJ4amDihPoufT5sM0Z1SKEuKay8LfVAMlbbhnnkvt6BUserZylqo2PN+p9KeljLr0OHa2rXHU1T8reeoTrw==}

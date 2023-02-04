@@ -8,8 +8,8 @@ specifiers:
   astro: 1.9.2
   autoprefixer: 10.4.13
   chrome-aws-lambda: 10.1.0
-  daisyui: 2.49.0
-  nanostores: 0.7.1
+  daisyui: 2.50.0
+  nanostores: 0.7.3
   npm-run-all: 4.1.5
   postcss-font-magician: 3.0.0
   prettier: 2.8.3
@@ -18,25 +18,25 @@ specifiers:
   puppeteer-core: 10.4.0
   react: 18.2.0
   react-dom: 18.2.0
-  react-hook-form: 7.42.1
-  sass: 1.57.1
+  react-hook-form: 7.43.0
+  sass: 1.58.0
   tailwindcss: 3.2.4
 
 dependencies:
   '@astrojs/react': 1.2.2_fxtgt6bjwd6p4cwoordejim2zi
-  '@nanostores/react': 0.4.1_zzfsm6rnukgopcmw3p5zs3flzu
+  '@nanostores/react': 0.4.1_r2zhwuwjlamxsrqcq6x6g7w7iu
   '@netlify/functions': 1.4.0
-  astro: 1.9.2_sass@1.57.1
+  astro: 1.9.2_sass@1.58.0
   autoprefixer: 10.4.13_postcss@8.4.21
   chrome-aws-lambda: 10.1.0_puppeteer-core@10.4.0
-  daisyui: 2.49.0_gbtt6ss3tbiz4yjtvdr6fbrj44
-  nanostores: 0.7.1
+  daisyui: 2.50.0_gbtt6ss3tbiz4yjtvdr6fbrj44
+  nanostores: 0.7.3
   postcss-font-magician: 3.0.0_postcss@8.4.21
   puppeteer-core: 10.4.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
-  react-hook-form: 7.42.1_react@18.2.0
-  sass: 1.57.1
+  react-hook-form: 7.43.0_react@18.2.0
+  sass: 1.58.0
   tailwindcss: 3.2.4_postcss@8.4.21
 
 devDependencies:
@@ -482,14 +482,14 @@ packages:
     resolution: {integrity: sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==}
     dev: false
 
-  /@nanostores/react/0.4.1_zzfsm6rnukgopcmw3p5zs3flzu:
+  /@nanostores/react/0.4.1_r2zhwuwjlamxsrqcq6x6g7w7iu:
     resolution: {integrity: sha512-lsv0CYrMxczbXtoV/mxFVEoL/uVjEjseoP89srO/5yNAOkJka+dSFS7LYyWEbuvCPO7EgbtkvRpO5V+OztKQOw==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     peerDependencies:
       nanostores: ^0.7.0
       react: '>=18.0.0'
     dependencies:
-      nanostores: 0.7.1
+      nanostores: 0.7.3
       react: 18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
@@ -809,7 +809,7 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /astro/1.9.2_sass@1.57.1:
+  /astro/1.9.2_sass@1.58.0:
     resolution: {integrity: sha512-L+Ma0eR0Aa6QZg7RF0lEs+106Ye1/zukvtq3KtsYIogAojltlwllwU9X5CwMBzFwA55NxpNp4gSRh5US/xb+8Q==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
     hasBin: true
@@ -873,7 +873,7 @@ packages:
       typescript: 4.9.5
       unist-util-visit: 4.1.2
       vfile: 5.3.6
-      vite: 3.2.5_sass@1.57.1
+      vite: 3.2.5_sass@1.58.0
       vitefu: 0.2.4_vite@3.2.5
       yargs-parser: 21.1.1
       zod: 3.20.2
@@ -1219,8 +1219,8 @@ packages:
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
 
-  /daisyui/2.49.0_gbtt6ss3tbiz4yjtvdr6fbrj44:
-    resolution: {integrity: sha512-+hEFMupi/7rqkAH4d3iBWj1TXRq73V3PrkJ3HiDqFuQgMoE1/UQOgMoeqaHa3r4IRo4fjMNauwHBA17qT0YSIA==}
+  /daisyui/2.50.0_gbtt6ss3tbiz4yjtvdr6fbrj44:
+    resolution: {integrity: sha512-KiqRvqMXi9rgoH84M8D69gXPg6x+cbdiaHqm8pFHOsXXN1rTl/+OcCKkSnkEwTtIge9VJVDGU6l4B8/n+Juc5g==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
@@ -3070,8 +3070,8 @@ packages:
     hasBin: true
     dev: false
 
-  /nanostores/0.7.1:
-    resolution: {integrity: sha512-7HenoVpZOjRudHCmAVWKloBTk3+Ozw49KuRWq/pNlEIIVS3x9dID+I5z3Rhjxl1muhHwv4dFhpT+0FebT9jvaA==}
+  /nanostores/0.7.3:
+    resolution: {integrity: sha512-Y9vjY/amja27yjYxj/zlWh+gvXX6pSb8IeF2DK1vCNiYKlZclXbUrSE36gjd1F53+Avg5/bUzKuiej/v82HjPQ==}
     engines: {node: ^14.0.0 || ^16.0.0 || >=18.0.0}
     dev: false
 
@@ -3587,8 +3587,8 @@ packages:
       scheduler: 0.23.0
     dev: false
 
-  /react-hook-form/7.42.1_react@18.2.0:
-    resolution: {integrity: sha512-2UIGqwMZksd5HS55crTT1ATLTr0rAI4jS7yVuqTaoRVDhY2Qc4IyjskCmpnmdYqUNOYFy04vW253tb2JRVh+IQ==}
+  /react-hook-form/7.43.0_react@18.2.0:
+    resolution: {integrity: sha512-/rVEz7T0gLdSFwPqutJ1kn2e0sQNyb9ci/hmwEYr2YG0KF/LSuRLvNrf9QWJM+gj88CjDpDW5Bh/1AD7B2+z9Q==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
@@ -3839,8 +3839,8 @@ packages:
     dependencies:
       suf-log: 2.5.3
 
-  /sass/1.57.1:
-    resolution: {integrity: sha512-O2+LwLS79op7GI0xZ8fqzF7X2m/m8WFfI02dHOdsK5R2ECeS5F62zrwg/relM1rjSLy7Vd/DiMNIvPrQGsA0jw==}
+  /sass/1.58.0:
+    resolution: {integrity: sha512-PiMJcP33DdKtZ/1jSjjqVIKihoDc6yWmYr9K/4r3fVVIEDAluD0q7XZiRKrNJcPK3qkLRF/79DND1H5q1LBjgg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
@@ -4440,7 +4440,7 @@ packages:
       vfile-message: 3.1.3
     dev: false
 
-  /vite/3.2.5_sass@1.57.1:
+  /vite/3.2.5_sass@1.58.0:
     resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -4469,7 +4469,7 @@ packages:
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 2.79.1
-      sass: 1.57.1
+      sass: 1.58.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: false
@@ -4482,7 +4482,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 3.2.5_sass@1.57.1
+      vite: 3.2.5_sass@1.58.0
     dev: false
 
   /vscode-css-languageservice/6.2.3:

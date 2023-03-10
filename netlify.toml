@@ -11,30 +11,14 @@
 [functions]
   external_node_modules = ["chrome-aws-lambda"] 
 
-[[plugins]]
-  package = "netlify-plugin-minify-html"
-
-[plugins.inputs.minifierOptions]
-  collapseWhitespace = true
-  minifyJS = true
-  processScripts = ["module"]
-
 [[redirects]]
-  from = "/img"
-  to = "/image/:url"
-  query = { url = ":url" }
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/img"
+  from = "/generate"
   to = "/image/:w/:h/:url"
   query = { w = ":w", h = ":h", url = ":url" }
   status = 301
   force = true
 
 [[redirects]]
-  from = "/image/*"
-  to = "/.netlify/functions/screenshot/:splat"
+  from = "/image/:w/:h/:url"
+  to = "/.netlify/functions/screenshot"
   status = 200
-  force = true

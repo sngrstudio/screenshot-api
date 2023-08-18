@@ -14,7 +14,7 @@
     "check": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/react": "1.2.2",
+    "@astrojs/react": "2.3.2",
     "@nanostores/react": "0.4.1",
     "@netlify/functions": "1.4.0",
     "astro": "1.9.2",

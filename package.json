@@ -20,7 +20,7 @@
     "astro": "1.9.2",
     "autoprefixer": "10.4.13",
     "chrome-aws-lambda": "10.1.0",
-    "daisyui": "2.50.0",
+    "daisyui": "3.6.4",
     "nanostores": "0.7.3",
     "postcss-font-magician": "3.0.0",
     "puppeteer-core": "10.4.0",

@@ -1,40 +1,20 @@
 {
-  "name": "ssapi",
-  "version": "1.0.0",
+  "name": "screenshot-function",
+  "version": "2.0.0",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "dev": "astro dev",
-    "start": "run-s build preview",
-    "prebuild": "run-s check",
-    "build": "astro build",
-    "preview": "astro preview",
+    "check": "prettier --check .",
     "format": "prettier --write .",
-    "check": "prettier --check ."
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@astrojs/react": "1.2.2",
-    "@nanostores/react": "0.4.1",
     "@netlify/functions": "1.4.0",
-    "astro": "1.9.2",
-    "autoprefixer": "10.4.13",
-    "chrome-aws-lambda": "10.1.0",
-    "daisyui": "2.50.0",
-    "nanostores": "0.7.3",
-    "postcss-font-magician": "3.0.0",
-    "puppeteer-core": "10.4.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-hook-form": "7.43.0",
-    "sass": "1.58.0",
-    "tailwindcss": "3.2.4"
-  },
-  "devDependencies": {
-    "@types/react": "18.0.27",
-    "npm-run-all": "4.1.5",
+    "@types/express": "^4.17.17",
+    "express": "^4.18.2",
     "prettier": "2.8.3",
-    "prettier-plugin-astro": "0.8.0",
-    "puppeteer": "10.4.0"
+    "puppeteer-core": "10.4.0",
+    "serverless-http": "^3.2.0",
+    "typescript": "^5.2.2"
   }
 }

@@ -1,24 +1,16 @@
 [dev]
-  framework = "astro"
-  command = "pnpm run dev"
   autoLaunch = false
 
 [build]
-  command = "pnpm run build"
-  publish = "dist"
-  functions = "functions"
+  command = "echo \"Building functions...\""
+  functions = "src"
 
 [functions]
-  external_node_modules = ["chrome-aws-lambda"] 
+  external_node_modules = ["express"]
+  node_bundler = "esbuild"
 
 [[redirects]]
-  from = "/generate"
-  to = "/image/:w/:h/:url"
-  query = { w = ":w", h = ":h", url = ":url" }
-  status = 301
   force = true
-
-[[redirects]]
-  from = "/image/:w/:h/:url"
-  to = "/.netlify/functions/screenshot"
+  from = "/*"
   status = 200
+  to = "/.netlify/functions/api/:splat"

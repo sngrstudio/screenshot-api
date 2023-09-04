@@ -10,18 +10,24 @@ const isURL = (url: string) => {
   }
 }
 
-const getImage: Handler = async (event) => {
+const api: Handler = async (event) => {
   const params = event.path.split('/')
-  if (!isURL(decodeURIComponent(params[params.length - 1])))
-    throw new Error(
-      `Please provide decoded URL, e.g: '/https%3A%2F%2Fwww.sngr.studio'`
-    )
+
+  if (!isURL(decodeURIComponent(params[params.length - 1]))) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        Error:
+          'Please provide valid encoded URL. Example: ?url=https%3A%2F%2Fwww.bing.com%2F',
+      }),
+    }
+  }
   const url = new URL(decodeURIComponent(params[params.length - 1]))
   const options = {
     width:
-      Number(params.find((p) => p.endsWith('w'))?.replace('w', '')) || 1200,
+      Number(params.find((p) => p.endsWith('w'))?.replace('w', '')) || 1280,
     height:
-      Number(params.find((p) => p.endsWith('h'))?.replace('h', '')) || 630,
+      Number(params.find((p) => p.endsWith('h'))?.replace('h', '')) || 720,
   }
 
   let browser: Browser | null = null
@@ -76,10 +82,10 @@ const getImage: Handler = async (event) => {
     },
     body: image.toString('base64'),
     isBase64Encoded: true,
-    ttl: 60 * 60 * 24 * 30 * 3,
+    ttl: 60 * 60 * 24 * 30 * 6,
   }
 }
 
-const handler = builder(getImage)
+const handler = builder(api)
 
 export { handler }

@@ -1,7 +1,5 @@
-import type { Handler } from '@netlify/functions'
-import type { Browser } from 'puppeteer-core'
-import { builder } from '@netlify/functions'
-import chrome from 'chrome-aws-lambda'
+import puppeteer, { type Browser } from 'puppeteer-core'
+import { builder, type Handler } from '@netlify/functions'
 
 const isURL = (url: string) => {
   try {
@@ -12,34 +10,33 @@ const isURL = (url: string) => {
   }
 }
 
-const getBrowser = async () =>
-  chrome.puppeteer.launch({
-    args: chrome.args,
-    headless: true,
-    ignoreHTTPSErrors: true,
-    defaultViewport: chrome.defaultViewport,
-    executablePath: await chrome.executablePath,
-  })
-
-const getImage: Handler = async (event) => {
+const api: Handler = async (event) => {
   const params = event.path.split('/')
-  if (!isURL(decodeURIComponent(params[params.length - 1])))
-    throw new Error(
-      `Please provide decoded URL, e.g: '/image/https%3A%2F%2Fwww.sngr.studio'`
-    )
+
+  if (!isURL(decodeURIComponent(params[params.length - 1]))) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        Error:
+          'Please provide valid encoded URL. Example: ?url=https%3A%2F%2Fwww.bing.com%2F',
+      }),
+    }
+  }
   const url = new URL(decodeURIComponent(params[params.length - 1]))
   const options = {
     width:
-      Number(params.find((p) => p.endsWith('w'))?.replace('w', '')) || 1200,
+      Number(params.find((p) => p.endsWith('w'))?.replace('w', '')) || 1280,
     height:
-      Number(params.find((p) => p.endsWith('h'))?.replace('h', '')) || 630,
+      Number(params.find((p) => p.endsWith('h'))?.replace('h', '')) || 720,
   }
 
   let browser: Browser | null = null
   let image: string | Buffer | null = null
 
   try {
-    browser = await getBrowser()
+    browser = await puppeteer.connect({
+      browserWSEndpoint: `wss://chrome.browserless.io?token=${process.env.BROWSER_TOKEN}`,
+    })
     const page = await browser.newPage()
     await page.setViewport({
       width: options.width,
@@ -48,7 +45,7 @@ const getImage: Handler = async (event) => {
 
     const response = await Promise.race([
       await page.goto(url.href, {
-        waitUntil: 'load',
+        waitUntil: 'networkidle2',
         timeout: 8500,
       }),
       new Promise((resolve) => {
@@ -85,10 +82,10 @@ const getImage: Handler = async (event) => {
     },
     body: image.toString('base64'),
     isBase64Encoded: true,
-    ttl: 60 * 60 * 24 * 30 * 3,
+    ttl: 60 * 60 * 24 * 30 * 6,
   }
 }
 
-const handler = builder(getImage)
+const handler = builder(api)
 
 export { handler }
